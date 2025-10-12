@@ -10,17 +10,25 @@ namespace E_Book_Store.Controllers;
 public class AdminController : Controller
 {
     private readonly UserManager<IdentityUser> UserManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
     private readonly IEBooksService EbooksService;
 
-    public AdminController(UserManager<IdentityUser> userManager, IEBooksService eBookService)
+    public AdminController(UserManager<IdentityUser> userManager, IEBooksService eBookService, RoleManager<IdentityRole> roleManager)
     {
         UserManager = userManager;
         EbooksService = eBookService;
+        _roleManager = roleManager;
     }
 
     public IActionResult Index()
     {
-        return View(new AdminIndexViewModel(UserManager.Users.ToList(), EbooksService.GetEbookCount()));
+        var users = _userManager.Users.ToList();
+        var model = new AdminIndexViewModel(users, ebooksCount: 42) // przykładowo
+        {
+            EnforcePasswordPolicy = true,
+            DefaultPasswordExpiryDays = 90
+        };
+        return View(model);
     }
 
     public async Task<IActionResult> Delete(string Id)
