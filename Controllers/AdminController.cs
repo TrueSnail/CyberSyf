@@ -30,6 +30,8 @@ public class AdminController : Controller
         };
         return View(model);
     }
+    
+
 
      public async Task<IActionResult> BlockUser(string id)
     {
@@ -56,6 +58,71 @@ public class AdminController : Controller
         }
         return RedirectToAction(nameof(Index));
     }
+
+    [HttpGet]
+    public async Task<IActionResult> EditUser(string id)
+    {
+        if (string.IsNullOrEmpty(id)) return RedirectToAction(nameof(Index));
+
+        var user = await UserManager.FindByIdAsync(id);
+        if (user == null) return RedirectToAction(nameof(Index));
+
+        var model = new AdminEditUserViewModel
+        {
+            UserId = id,
+            UserName = user.UserName!,
+            Email = user.Email
+        };
+        return View(model);
+    }
+    [HttpPost]
+    public async Task<IActionResult> EditUser(AdminEditUserViewModel model)
+    {
+        if (!ModelState.IsValid) return View(model);
+
+        var user = await UserManager.FindByIdAsync(model.UserId);
+        if (user == null) return RedirectToAction(nameof(Index));
+
+        user.UserName = model.UserName;
+        user.Email = model.Email;
+
+        var updateResult = await UserManager.UpdateAsync(user);
+
+        if (!updateResult.Succeeded)
+        {
+            foreach (var error in updateResult.Errors)
+                ModelState.AddModelError("", error.Description);
+            return View(model);
+        }
+
+        // Jeśli hasło zostało podane i nie jest puste, zmień je
+        if (!string.IsNullOrWhiteSpace(model.NewPassword))
+        {
+            // Usuń stare hasło
+            var removePassResult = await UserManager.RemovePasswordAsync(user);
+            if (!removePassResult.Succeeded)
+            {
+                foreach (var error in removePassResult.Errors)
+                    ModelState.AddModelError("", error.Description);
+                return View(model);
+            }
+
+            var addPassResult = await UserManager.AddPasswordAsync(user, model.NewPassword);
+            if (!addPassResult.Succeeded)
+            {
+                foreach (var error in addPassResult.Errors)
+                    ModelState.AddModelError("", error.Description);
+                return View(model);
+            }
+        }
+
+        return RedirectToAction(nameof(Index));
+    }
+
+    //private bool IsUserBlocked(IdentityUser user)
+    //{
+    //    return user.LockoutEnd.HasValue && user.LockoutEnd.Value > DateTimeOffset.UtcNow;
+    //}
 
     public async Task<IActionResult> Delete(string Id)
     {
