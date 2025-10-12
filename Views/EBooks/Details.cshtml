@@ -1,0 +1,46 @@
+﻿@model E_Book_Store.ViewModels.EBooks.EBooksDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    bool isEbookEditor = User.IsInRole(nameof(Roles.EBookEditor));
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>EBook</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PathToContent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PathToContent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (isEbookEditor)
+    {
+        <text><a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |</text>
+    }
+    <a asp-action="Index">Back to List</a>
+</div>

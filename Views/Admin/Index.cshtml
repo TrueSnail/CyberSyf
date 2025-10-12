@@ -1,0 +1,187 @@
+﻿@using E_Book_Store.ViewModels.Admin
+@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<IdentityUser> UserManager
+
+@model AdminIndexViewModel
+
+@{
+    ViewData["Title"] = "Admin Panel";
+    string GetRoles(IdentityUser user)
+    {
+        var roles = UserManager.GetRolesAsync(user).Result.Append("").Aggregate((s1, s2) => s1 + " " + s2);
+        if (string.IsNullOrEmpty(roles)) return "User";
+        else return roles;
+    }
+    int GetUserCountForRole(string role)
+    {
+        int count = 0;
+        foreach (var user in Model.Users)
+        {
+            if (GetRoles(user).Contains(role)) count++;
+        }
+        return count;
+    }
+}
+
+<div id="content" style="margin: 100px 100px;">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+
+            <!-- Current Users count -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Current Users
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    @Model.UsersCount
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">User Roles</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div class="chart-pie pt-4 pb-2">
+                            <canvas id="myPieChart"></canvas>
+                        </div>
+                        <div class="mt-4 text-center small">
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-primary"></i> Admin
+                            </span>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-success"></i> Writer
+                            </span>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-info"></i> Client
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Ebooks count -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Current Ebooks
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    @Model.EBooksCount
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <table style="width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <thead style="background-color: #ede9fe; color: #5b21b6; text-transform: uppercase; font-size: 0.875rem;">
+                <tr>
+                    <th style="padding: 1rem; text-align: center;">Username</th>
+                    <th style="padding: 1rem; text-align: center;">Role</th>
+                    <th style="padding: 1rem; text-align: center;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr style="border-top: 1px solid #e5e7eb;" onmouseover="this.style.backgroundColor='#f3e8ff'" onmouseout="this.style.backgroundColor='white'">
+                        <td style="padding: 1rem; text-align: center;">@user.UserName</td>
+                        <td style="padding: 1rem; text-align: center;">
+                            @* <select asp-for="user" class="form-control" asp-items="@Html.GetEnumSelectList<E_Book_Store.Roles>()"></select> *@
+                            @GetRoles(user)
+                        </td>
+                        <td style="padding: 1rem; text-align: center;">
+                            <a asp-action="Delete" asp-route-id="@user.Id" style="background-color: #9333ea; color: white; padding: 0.4rem 0.8rem; border-radius: 0.375rem; text-decoration: none; font-size: 0.875rem;" onmouseover="this.style.backgroundColor='#7c3aed'" onmouseout="this.style.backgroundColor='#9333ea'">Delete</a>
+@*                             <a asp-action="Update" asp-route-id="@user.Id" style="background-color: #9333ea; color: white; padding: 0.4rem 0.8rem; border-radius: 0.375rem; text-decoration: none; font-size: 0.875rem;" onmouseover="this.style.backgroundColor='#7c3aed'" onmouseout="this.style.backgroundColor='#9333ea'">Update</a> *@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="admin-js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Pie chart -->
+    <script>
+        Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+        Chart.defaults.global.defaultFontColor = '#858796';
+
+        // Pie Chart Example
+        var ctx = document.getElementById("myPieChart");
+        var myPieChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ["Admin", "Writer", "Client"],
+            datasets: [{
+              data: [@GetUserCountForRole(nameof(E_Book_Store.Roles.Admin)), @GetUserCountForRole(nameof(E_Book_Store.Roles.EBookEditor)), @GetUserCountForRole("User")],
+              backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+              hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+              hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+          },
+          options: {
+            maintainAspectRatio: false,
+            tooltips: {
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+            },
+            legend: {
+              display: false
+            },
+            cutoutPercentage: 80,
+          },
+        });
+    </script>
+}

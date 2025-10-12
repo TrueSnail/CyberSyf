@@ -1,0 +1,67 @@
+﻿@using E_Book_Store.ViewModels.EBooks
+
+@model EBooksIndexViewModel
+
+@{
+    ViewData["Title"] = "E-Books";
+    bool isEbookEditor = User.IsInRole(nameof(Roles.EBookEditor));
+}
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+    <!-- Page Title -->
+    <h1 style="font-size: 3rem; font-weight: bold; text-align: center; color: #4c1d95; margin-bottom: 1rem;">E-Books</h1>
+
+    <!-- Intro Section -->
+    <div style="margin-bottom: 2rem; text-align: center;">
+        <p style="font-size: 1.125rem; color: #4b5563; max-width: 800px; margin: 0 auto;">
+            Welcome to our e-book store dashboard. Here, you can explore the available e-books and manage the catalog. Editors have the ability to create new entries and update or remove existing ones. Use the action buttons to take control of your digital library.
+        </p>
+    </div>
+
+    <!-- Create Button Section -->
+    @if (isEbookEditor)
+    {
+        <div style="margin-bottom: 1.5rem; text-align: right;">
+            <a asp-action="Create" style="background-color: #8b5cf6; color: white; padding: 0.6rem 1.2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#7c3aed'" onmouseout="this.style.backgroundColor='#8b5cf6'">Create New</a>
+        </div>
+    }
+
+    <!-- Table Section -->
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <thead style="background-color: #ede9fe; color: #5b21b6; text-transform: uppercase; font-size: 0.875rem;">
+                <tr>
+                    <th style="padding: 1rem; text-align: center;">@Html.DisplayNameFor(model => new EBooksIndexItemViewModel().Author)</th>
+                    <th style="padding: 1rem; text-align: center;">@Html.DisplayNameFor(model => new EBooksIndexItemViewModel().Title)</th>
+                    <th style="padding: 1rem; text-align: center;">@Html.DisplayNameFor(model => new EBooksIndexItemViewModel().Price)</th>
+                    <th style="padding: 1rem; text-align: center;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.OrderedEBooks)
+                {
+                    <tr style="border-top: 1px solid #e5e7eb;" onmouseover="this.style.backgroundColor='#f3e8ff'" onmouseout="this.style.backgroundColor='white'">
+                        <td style="padding: 1rem; text-align: center;">@Html.DisplayFor(modelItem => item.Author)</td>
+                        <td style="padding: 1rem; text-align: center;">@Html.DisplayFor(modelItem => item.Title)</td>
+                        <td style="padding: 1rem; text-align: center;">@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td style="padding: 1rem; text-align: center;">
+                            @if (isEbookEditor)
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.Id" style="background-color: #a78bfa; color: white; padding: 0.4rem 0.8rem; border-radius: 0.375rem; margin-right: 0.5rem; text-decoration: none; font-size: 0.875rem;" onmouseover="this.style.backgroundColor='#7c3aed'" onmouseout="this.style.backgroundColor='#a78bfa'">Edit</a>
+                                @if (!item.Bought)
+                                {
+                                    <a asp-action="Buy" asp-route-id="@item.Id" style="background-color: #ddd6fe; color: #4c1d95; padding: 0.4rem 0.8rem; border-radius: 0.375rem; margin-right: 0.5rem; text-decoration: none; font-size: 0.875rem;" onmouseover="this.style.backgroundColor='#c4b5fd'" onmouseout="this.style.backgroundColor='#ddd6fe'">Buy</a>
+                                }
+                                <a asp-action="Delete" asp-route-id="@item.Id" style="background-color: #9333ea; color: white; padding: 0.4rem 0.8rem; border-radius: 0.375rem; text-decoration: none; font-size: 0.875rem;" onmouseover="this.style.backgroundColor='#7c3aed'" onmouseout="this.style.backgroundColor='#9333ea'">Delete</a>
+                            }
+                            else
+                            {
+                                <a asp-action="Buy" asp-route-id="@item.Id" style="background-color: #ddd6fe; color: #4c1d95; padding: 0.4rem 0.8rem; border-radius: 0.375rem; text-decoration: none; font-size: 0.875rem;" onmouseover="this.style.backgroundColor='#c4b5fd'" onmouseout="this.style.backgroundColor='#ddd6fe'">Buy</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

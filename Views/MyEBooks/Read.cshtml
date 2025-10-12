@@ -1,0 +1,28 @@
+﻿@using E_Book_Store.ViewModels.MyEBooks
+@model MyEBooksReadViewModel
+
+@{
+    ViewData["Title"] = $"{Model.Title} by {Model.Author}";
+}
+
+<div style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+    <!-- Book Header -->
+    <h1 style="font-size: 2.5rem; font-weight: bold; color: #4c1d95; text-align: center; margin-bottom: 0.5rem;">
+        @Model.Title
+    </h1>
+    <h2 style="font-size: 1.25rem; color: #6b7280; text-align: center; margin-bottom: 2rem;">
+        by @Model.Author
+    </h2>
+
+    <!-- Book Content -->
+    <div style="font-size: 1.125rem; line-height: 1.8; color: #1f2937; white-space: pre-wrap;">
+        @Model.Content
+    </div>
+
+    <!-- Back Link -->
+    <div style="margin-top: 3rem; text-align: center;">
+        <a asp-action="Index" style="background-color: #8b5cf6; color: white; padding: 0.6rem 1.2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#7c3aed'" onmouseout="this.style.backgroundColor='#8b5cf6'">
+            Back to My E-Books
+        </a>
+    </div>
+</div>

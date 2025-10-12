@@ -1,0 +1,52 @@
+﻿@using E_Book_Store.ViewModels.EBooks
+@model EBooksCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 100px; padding-bottom: 100px;">
+    <h1 style="color: #2c3e50;">Create an EBook</h1>
+
+    <div class="row" style="width: 100%; max-width: 600px;">
+        <div class="col-md-12">
+            <form asp-action="Create" asp-formhelper="true" style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger" style="font-size: 0.9em;"></div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label asp-for="Author" class="control-label" style="font-weight: 600; color: #34495e;"></label>
+                    <input asp-for="Author" class="form-control" style="border: 1px solid #ccc; border-radius: 6px; padding: 10px; width: 100%; transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='#3498db'; this.style.boxShadow='0 0 5px rgba(52, 152, 219, 0.5)'" onmouseout="this.style.borderColor='#ccc'; this.style.boxShadow='none'" />
+                    <span asp-validation-for="Author" class="text-danger" style="font-size: 0.9em;"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label asp-for="Title" class="control-label" style="font-weight: 600; color: #34495e;"></label>
+                    <input asp-for="Title" class="form-control" style="border: 1px solid #ccc; border-radius: 6px; padding: 10px; width: 100%; transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='#3498db'; this.style.boxShadow='0 0 5px rgba(52, 152, 219, 0.5)'" onmouseout="this.style.borderColor='#ccc'; this.style.boxShadow='none'" />
+                    <span asp-validation-for="Title" class="text-danger" style="font-size: 0.9em;"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label asp-for="Content" class="control-label" style="font-weight: 600; color: #34495e;"></label>
+                    <textarea asp-for="Content" rows="6" class="form-control" style="resize: vertical; border: 1px solid #ccc; border-radius: 6px; padding: 10px; width: 100%; font-family: inherit; transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='#3498db'; this.style.boxShadow='0 0 5px rgba(52, 152, 219, 0.5)'" onmouseout="this.style.borderColor='#ccc'; this.style.boxShadow='none'"></textarea>
+                    <span asp-validation-for="Content" class="text-danger" style="font-size: 0.9em;"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label asp-for="Price" class="control-label" style="font-weight: 600; color: #34495e;"></label>
+                    <input asp-for="Price" class="form-control" style="border: 1px solid #ccc; border-radius: 6px; padding: 10px; width: 100%; transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='#3498db'; this.style.boxShadow='0 0 5px rgba(52, 152, 219, 0.5)'" onmouseout="this.style.borderColor='#ccc'; this.style.boxShadow='none'" />
+                    <span asp-validation-for="Price" class="text-danger" style="font-size: 0.9em;"></span>
+                </div>
+                <div class="form-group" style="margin-top: 25px; text-align: center;">
+                    <input type="submit" value="Create" class="btn btn-primary" style="font-size: 1.2em; background-color: #3498db; border: none; padding: 14px 36px; font-weight: bold; border-radius: 6px; color: white; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;" onmouseover="this.style.backgroundColor='#2980b9'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#3498db'; this.style.transform='none'" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" style="display: inline-block; margin-top: 20px; color: #2980b9; text-decoration: none; transition: color 0.2s ease, transform 0.2s ease;" onmouseover="this.style.color='#1c5980'; this.style.transform='translateX(4px)'" onmouseout="this.style.color='#2980b9'; this.style.transform='none'">&larr; Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
