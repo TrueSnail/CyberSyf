@@ -20,18 +20,18 @@ namespace E_Book_Store.ViewModels.Admin
         public int DefaultPasswordExpiryDays { get; set; }
 
         //dodawanie nowego użytkownika
-        public NewUserModel NewUser { get; set; } = new();
+        //public NewUserModel NewUser { get; set; } = new();
 
     
     }
     //klasa tworząca nowego użytkownika
-    public class NewUserModel
-    {
-        public string UserName { get; set; }
-        public string FullName { get; set; }
-        public string Password { get; set; }
-        public bool IsAdmin { get; set; }
-    }
+    //public class NewUserModel
+    //{
+    //    public string UserName { get; set; }
+    //    public string FullName { get; set; }
+    //    public string Password { get; set; }
+    //    public bool IsAdmin { get; set; }
+    //}
 }
 
 

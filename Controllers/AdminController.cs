@@ -22,13 +22,39 @@ public class AdminController : Controller
 
     public IActionResult Index()
     {
-        var users = _userManager.Users.ToList();
-        var model = new AdminIndexViewModel(users, ebooksCount: 42) // przykładowo
+        var users = UserManager.Users.ToList();
+        var model = new AdminIndexViewModel(users, ebooksCount: 42)
         {
             EnforcePasswordPolicy = true,
             DefaultPasswordExpiryDays = 90
         };
         return View(model);
+    }
+
+     public async Task<IActionResult> BlockUser(string id)
+    {
+        if (string.IsNullOrEmpty(id)) return RedirectToAction(nameof(Index));
+
+        var user = await UserManager.FindByIdAsync(id);
+        if (user != null)
+        {
+            user.LockoutEnabled = true;
+            user.LockoutEnd = DateTimeOffset.MaxValue; // blokada na czas nieokreślony
+            await UserManager.UpdateAsync(user);
+        }
+        return RedirectToAction(nameof(Index));
+    }
+    public async Task<IActionResult> UnblockUser(string id)
+    {
+        if (string.IsNullOrEmpty(id)) return RedirectToAction(nameof(Index));
+
+        var user = await UserManager.FindByIdAsync(id);
+        if (user != null)
+        {
+            user.LockoutEnd = null;
+            await UserManager.UpdateAsync(user);
+        }
+        return RedirectToAction(nameof(Index));
     }
 
     public async Task<IActionResult> Delete(string Id)

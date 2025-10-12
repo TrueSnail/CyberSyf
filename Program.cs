@@ -5,8 +5,9 @@ using E_Book_Store.Validation;
 using E_Book_Store.ViewModels.EBooks;
 using FluentValidation;
 using FormHelper;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,9 +21,13 @@ builder.Services.AddDbContext<EBookDbContext>(options =>
 });
 
 builder.Services.AddRazorPages();
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<EBookDbContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireUppercase = true;
+})
+.AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<EBookDbContext>();
 builder.Services.AddAutoMapper(cfg =>
 {
     cfg.CreateMap<EBooksCreateViewModel, EBook>();
