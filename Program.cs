@@ -15,6 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("secrets.json");
 builder.Services.AddControllersWithViews().AddFormHelper();
 builder.Services.AddValidatorsFromAssemblyContaining<EBookValidator>();
+//builder.Services.AddScoped<IPasswordValidator<ApplicationUser>, CustomPasswordValidator<ApplicationUser>>();
+
 builder.Services.AddDbContext<EBookDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));

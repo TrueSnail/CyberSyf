@@ -1,4 +1,5 @@
-﻿using E_Book_Store.Services;
+﻿using E_Book_Store.Models;
+using E_Book_Store.Services;
 using E_Book_Store.ViewModels.Admin;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -56,6 +57,39 @@ public class AdminController : Controller
             user.LockoutEnd = null;
             await UserManager.UpdateAsync(user);
         }
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> UpdatePasswordPolicies(List<PasswordSettingsViewModel> Users)
+    {
+        foreach (var userModel in Users)
+        {
+            var user = await UserManager.FindByIdAsync(userModel.UserId);
+            if (user is ApplicationUser appUser)
+            {
+                appUser.EnforcePasswordPolicy = userModel.EnforcePasswordPolicy;
+                appUser.PasswordExpiryDays = userModel.PasswordExpiryDays;
+
+                await UserManager.UpdateAsync(appUser);
+            }
+        }
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> PasswordSettings(PasswordSettingsViewModel model)
+    {
+        if (!ModelState.IsValid) return View(model);
+    
+        var user = await UserManager.FindByIdAsync(model.UserId);
+        if (user == null) return RedirectToAction(nameof(Index));
+
+        var appUser = (ApplicationUser)user;
+        appUser.EnforcePasswordPolicy = model.EnforcePasswordPolicy;
+        appUser.PasswordExpiryDays = model.PasswordExpiryDays;
+
+        await UserManager.UpdateAsync(appUser);
         return RedirectToAction(nameof(Index));
     }
 
