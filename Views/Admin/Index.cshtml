@@ -107,7 +107,6 @@
 
         </div>
 
-        @* <form asp-action="UpdatePasswordPolicies" method="post"> *@
             <table style="width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
 
                 <thead style="background-color: #ede9fe; color: #5b21b6; text-transform: uppercase; font-size: 0.875rem;">
@@ -123,6 +122,7 @@
                 <tbody>
                     @foreach (var user in Model.Users)
                     {
+                        <form asp-action="UpdatePasswordPolicies" method="post">
                         <tr style="border-top: 1px solid #e5e7eb;"
                             onmouseover="this.style.backgroundColor='#f3e8ff'"
                             onmouseout="this.style.backgroundColor='white'">
@@ -145,12 +145,15 @@
                                     Edit
                                 </a>
                             </td>
-                            @* <td style="padding: 1rem; text-align: center;">
-                                <input type="checkbox" name="Users[@i].EnforcePasswordPolicy" value="true" @(user.EnforcePasswordPolicy ? "checked" : "") />
+                            <td style="padding: 1rem; text-align: center;">
+                            <input type="hidden" name="Users[@user].EnforcePasswordPolicy" value="false" />
+                            <input type="checkbox" name="Users[@user].EnforcePasswordPolicy" value="true" @(user.EnforcePasswordPolicy ? "checked" : "") />
+
                             </td>
                             <td style="padding: 1rem; text-align: center;">
-                                <input type="number" name="Users[@i].PasswordExpiryDays" value="@user.PasswordExpiryDays" min="1" max="365" style="width: 70px;" />
-                            </td> *@
+                                <input type="number" name="Users[@user].PasswordExpiryDays" value="@user.PasswordExpiryDays" min="1" max="365" style="width: 70px;" />
+                            </td>
+                            <td><button type="submit">Submit</button></td>
                             <td style="padding: 1rem; text-align: center;">
                                 <a asp-action="BlockUser" asp-route-id="@user.Id"
                                    style="background-color: #9333ea; color: white; padding: 0.4rem 0.8rem; border-radius: 0.375rem; text-decoration: none; font-size: 0.875rem;"
@@ -167,10 +170,12 @@
                                 </a>
                             </td>
                         </tr>
+                    </form>
+
                     }
                 </tbody>
             </table>
-
+            
     </div>
 
 </div>
