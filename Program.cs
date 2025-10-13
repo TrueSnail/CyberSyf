@@ -15,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("secrets.json");
 builder.Services.AddControllersWithViews().AddFormHelper();
 builder.Services.AddValidatorsFromAssemblyContaining<EBookValidator>();
-//builder.Services.AddScoped<IPasswordValidator<ApplicationUser>, CustomPasswordValidator<ApplicationUser>>();
+builder.Services.AddScoped<IPasswordValidator<ApplicationUser>, CustomPasswordValidator<ApplicationUser>>();
 
 builder.Services.AddDbContext<EBookDbContext>(options =>
 {
@@ -23,7 +23,7 @@ builder.Services.AddDbContext<EBookDbContext>(options =>
 });
 
 builder.Services.AddRazorPages();
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
     options.Password.RequireDigit = true;
     options.Password.RequireUppercase = true;

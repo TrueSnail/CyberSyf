@@ -1,4 +1,5 @@
-﻿using E_Book_Store.Services;
+﻿using E_Book_Store.Models;
+using E_Book_Store.Services;
 using E_Book_Store.ViewModels.MyEBooks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -11,9 +12,9 @@ public class MyEBooksController : Controller
 {
     private readonly IEBooksService EBookService;
     private readonly IEBooksContentService EBooksContentService;
-    private readonly UserManager<IdentityUser> UserManager;
+    private readonly UserManager<ApplicationUser> UserManager;
 
-    public MyEBooksController(IEBooksService eBookService, IEBooksContentService ebookContentService, UserManager<IdentityUser> userManager)
+    public MyEBooksController(IEBooksService eBookService, IEBooksContentService ebookContentService, UserManager<ApplicationUser> userManager)
     {
         EBooksContentService = ebookContentService;
         EBookService = eBookService;

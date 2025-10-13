@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace E_Book_Store.Data;
 
-public class EBookDbContext : IdentityDbContext<IdentityUser>
+public class EBookDbContext : IdentityDbContext<ApplicationUser>
 {
     public DbSet<EBook> EBooks { get; set; }
     public DbSet<EBookPurchase> EBookPurchases { get; set; }
@@ -18,7 +18,7 @@ public class EBookDbContext : IdentityDbContext<IdentityUser>
             .WithMany()
             .HasForeignKey(p => p.EBookId);
         builder.Entity<EBookPurchase>()
-            .HasOne<IdentityUser>()
+            .HasOne<ApplicationUser>()
             .WithMany()
             .HasForeignKey(p => p.UserId);
 

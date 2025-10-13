@@ -10,11 +10,11 @@ namespace E_Book_Store.Controllers;
 [Authorize(Roles = nameof(Roles.Admin))]
 public class AdminController : Controller
 {
-    private readonly UserManager<IdentityUser> UserManager;
+    private readonly UserManager<ApplicationUser> UserManager;
     private readonly RoleManager<IdentityRole> _roleManager;
     private readonly IEBooksService EbooksService;
 
-    public AdminController(UserManager<IdentityUser> userManager, IEBooksService eBookService, RoleManager<IdentityRole> roleManager)
+    public AdminController(UserManager<ApplicationUser> userManager, IEBooksService eBookService, RoleManager<IdentityRole> roleManager)
     {
         UserManager = userManager;
         EbooksService = eBookService;

@@ -23,9 +23,9 @@ public class EBooksController : Controller
     private readonly IEBooksContentService EBookContentService;
     private readonly IValidator<EBook> EBookValidator;
     private readonly IMapper Mapper;
-    private readonly UserManager<IdentityUser> UserManager;
+    private readonly UserManager<ApplicationUser> UserManager;
 
-    public EBooksController(IEBooksService eBookService, IEBooksContentService ebookContentService, IValidator<EBook> eBookValidator, IMapper mapper, UserManager<IdentityUser> userManager)
+    public EBooksController(IEBooksService eBookService, IEBooksContentService ebookContentService, IValidator<EBook> eBookValidator, IMapper mapper, UserManager<ApplicationUser> userManager)
     {
         EBookService = eBookService;
         EBookContentService = ebookContentService;
