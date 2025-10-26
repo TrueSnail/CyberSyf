@@ -1,7 +1,7 @@
 ﻿using JPRDL.Services;
 using JPRDL.Models;
 
-namespace SecuritySystem.Views
+namespace JPRDL.Views
 {
     public partial class AdminPage : ContentPage
     {
@@ -79,7 +79,7 @@ namespace SecuritySystem.Views
 
         private void LoadUsers()
         {
-            UsersContainer.Clear();
+            UsersContainer.Children.Clear();
             var users = _userService.GetAllUsers();
 
             foreach (var user in users)

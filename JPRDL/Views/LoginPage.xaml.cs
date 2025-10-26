@@ -1,7 +1,7 @@
 ﻿using JPRDL.Services;
 using JPRDL.Models;
 
-namespace SecuritySystem.Views
+namespace JPRDL.Views
 {
     public partial class LoginPage : ContentPage
     {

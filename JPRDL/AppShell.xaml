@@ -3,13 +3,16 @@
     x:Class="JPRDL.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SecuritySystem.Views"
+    xmlns:local="clr-namespace:JPRDL.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="JPRDL">
 
+    <!--<ShellContent Title="Login" ContentTemplate="{DataTemplate local:LoginPage}" Route="Login" />
+    <ShellContent Title="User"  ContentTemplate="{DataTemplate local:UserPage}"  Route="User" />
+    <ShellContent Title="Admin" ContentTemplate="{DataTemplate local:AdminPage}" Route="Admin" />-->
     <ShellContent
-        Title="Home"
+        Title="Login"
         ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="MainPage" />
+        Route="LoginPage" />
 
 </Shell>
