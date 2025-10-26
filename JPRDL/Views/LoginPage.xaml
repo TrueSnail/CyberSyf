@@ -15,25 +15,32 @@
                    HorizontalOptions="Center"
                    Margin="0,0,0,30"/>
             
-            <Frame BorderColor="LightGray" 
-                   CornerRadius="10" 
-                   Padding="20"
-                   HasShadow="True">
+            <Border StrokeThickness="1"
+                    Stroke="LightGray"
+                    StrokeShape="RoundRectangle 10"
+                    Padding="20"
+                    Background="White">
                 <VerticalStackLayout Spacing="15">
                     
                     <Label Text="Identyfikator użytkownika:" 
-                           FontSize="16"/>
+                           FontSize="16"
+                           TextColor="Black"/>
                     <Entry x:Name="UsernameEntry" 
                            Placeholder="Wpisz nazwę użytkownika"
-                           FontSize="16"/>
+                           FontSize="16"
+                           TextColor="Black"
+                           PlaceholderColor="Gray"/>
                     
                     <Label Text="Hasło:" 
                            FontSize="16"
+                           TextColor="Black"
                            Margin="0,10,0,0"/>
                     <Entry x:Name="PasswordEntry" 
                            Placeholder="Wpisz hasło" 
                            IsPassword="True"
-                           FontSize="16"/>
+                           FontSize="16"
+                           TextColor="Black"
+                           PlaceholderColor="Gray"/>
                     
                     <Label x:Name="ErrorLabel" 
                            TextColor="Red" 
@@ -50,7 +57,7 @@
                             HeightRequest="50"/>
                     
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
             
             <Label Text="Domyślne konto administratora:"
                    FontSize="12"

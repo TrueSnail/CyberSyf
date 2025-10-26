@@ -3,60 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\danie\\source\\repos\\CyberSyf\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\changepasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\changepasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\adminpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\adminpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\adminpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\adminpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\changepasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\changepasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\changepasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\changepasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\jprdl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\jprdl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,189 +50,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChangePasswordPage.xaml",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml",
-              "RelativeDocumentMoniker": "JPRDL\\Views\\ChangePasswordPage.xaml",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml",
-              "RelativeToolTip": "JPRDL\\Views\\ChangePasswordPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-26T12:55:42.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\UserPage.xaml.cs",
-              "RelativeDocumentMoniker": "JPRDL\\Views\\UserPage.xaml.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\UserPage.xaml.cs",
-              "RelativeToolTip": "JPRDL\\Views\\UserPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T12:53:42.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "JPRDL\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Services\\UserService.cs",
-              "RelativeToolTip": "JPRDL\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T12:40:52.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdminPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\AdminPage.xaml.cs",
-              "RelativeDocumentMoniker": "JPRDL\\Views\\AdminPage.xaml.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\AdminPage.xaml.cs",
-              "RelativeToolTip": "JPRDL\\Views\\AdminPage.xaml.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAIAxwAEBAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T12:39:48.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "JPRDL\\AppShell.xaml.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\AppShell.xaml.cs",
-              "RelativeToolTip": "JPRDL\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T12:12:28.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserPage.xaml",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\UserPage.xaml",
-              "RelativeDocumentMoniker": "JPRDL\\Views\\UserPage.xaml",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\UserPage.xaml",
-              "RelativeToolTip": "JPRDL\\Views\\UserPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-26T12:10:28.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\LoginPage.xaml",
               "RelativeDocumentMoniker": "JPRDL\\Views\\LoginPage.xaml",
               "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\LoginPage.xaml",
               "RelativeToolTip": "JPRDL\\Views\\LoginPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-26T12:10:23.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminPage.xaml",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\AdminPage.xaml",
-              "RelativeDocumentMoniker": "JPRDL\\Views\\AdminPage.xaml",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\AdminPage.xaml",
-              "RelativeToolTip": "JPRDL\\Views\\AdminPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-26T12:10:12.201Z",
+              "WhenOpened": "2025-10-26T13:22:19.588Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "JPRDL\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\MauiProgram.cs",
-              "RelativeToolTip": "JPRDL\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T18:57:58.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ChangePasswordPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml.cs",
-              "RelativeDocumentMoniker": "JPRDL\\Views\\ChangePasswordPage.xaml.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml.cs",
-              "RelativeToolTip": "JPRDL\\Views\\ChangePasswordPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T12:55:51.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "JPRDL\\Views\\LoginPage.xaml.cs",
               "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\LoginPage.xaml.cs",
               "RelativeToolTip": "JPRDL\\Views\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T12:56:14.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-26T13:21:34.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\App.xaml",
-              "RelativeDocumentMoniker": "JPRDL\\App.xaml",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\App.xaml",
-              "RelativeToolTip": "JPRDL\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-26T13:03:12.395Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "ChangePasswordPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml.cs",
+              "RelativeDocumentMoniker": "JPRDL\\Views\\ChangePasswordPage.xaml.cs",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml.cs",
+              "RelativeToolTip": "JPRDL\\Views\\ChangePasswordPage.xaml.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAowA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T13:21:18.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\AppShell.xaml",
-              "RelativeDocumentMoniker": "JPRDL\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\AppShell.xaml",
-              "RelativeToolTip": "JPRDL\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-26T12:09:46.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+              "DocumentIndex": 5,
+              "Title": "JPRDL.csproj",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\JPRDL.csproj",
+              "RelativeDocumentMoniker": "JPRDL\\JPRDL.csproj",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\JPRDL.csproj",
+              "RelativeToolTip": "JPRDL\\JPRDL.csproj",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-26T13:07:35.345Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "JPRDL\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Services\\UserService.cs",
+              "RelativeToolTip": "JPRDL\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T12:40:52.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\App.xaml.cs",
               "RelativeDocumentMoniker": "JPRDL\\App.xaml.cs",
               "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\App.xaml.cs",
               "RelativeToolTip": "JPRDL\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T13:03:19.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-26T13:03:19.64Z"
             }
           ]
         }

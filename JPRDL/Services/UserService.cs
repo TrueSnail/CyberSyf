@@ -1,6 +1,5 @@
 ﻿using JPRDL.Models;
 using System.Text.Json;
-using System.IO;
 using Microsoft.Maui.Storage;
 
 namespace JPRDL.Services
@@ -8,7 +7,7 @@ namespace JPRDL.Services
     public class UserService
     {
         private readonly string _dataPath;
-        private UserDatabase _database;
+        private UserDatabase _database = new UserDatabase(); // INICJALIZACJA TUTAJ
 
         public UserService()
         {

@@ -7,25 +7,20 @@ namespace JPRDL.Views
     {
         private readonly UserService _userService;
         private readonly User _currentUser;
-        private readonly bool _isRequired;
+        private readonly bool _isFirstLogin;
 
-        public ChangePasswordPage(UserService userService, User currentUser, bool isRequired)
+        public ChangePasswordPage(UserService userService, User currentUser, bool isFirstLogin)
         {
             InitializeComponent();
             _userService = userService;
             _currentUser = currentUser;
-            _isRequired = isRequired;
+            _isFirstLogin = isFirstLogin;
 
-            RequirementsLabel.Text = _userService.GetPasswordRequirementsText();
+            RequirementsLabel.Text = "Wymagania:\n" + _userService.GetPasswordRequirementsText();
 
-            if (_isRequired)
+            if (_isFirstLogin)
             {
-                InfoLabel.Text = "Musisz zmienić hasło przed kontynuowaniem";
-                CancelButton.IsVisible = false;
-            }
-            else
-            {
-                InfoLabel.IsVisible = false;
+                Title = "Zmiana hasła - Pierwsze logowanie";
             }
         }
 
@@ -33,66 +28,65 @@ namespace JPRDL.Views
         {
             ErrorLabel.IsVisible = false;
 
-            string oldPassword = OldPasswordEntry.Text ?? string.Empty;
-            string newPassword = NewPasswordEntry.Text ?? string.Empty;
-            string confirmPassword = ConfirmPasswordEntry.Text ?? string.Empty;
+            string oldPassword = OldPasswordEntry.Text?.Trim() ?? "";
+            string newPassword = NewPasswordEntry.Text?.Trim() ?? "";
+            string confirmPassword = ConfirmPasswordEntry.Text?.Trim() ?? "";
 
-            if (string.IsNullOrEmpty(oldPassword) || 
-                string.IsNullOrEmpty(newPassword) || 
-                string.IsNullOrEmpty(confirmPassword))
+            if (string.IsNullOrWhiteSpace(oldPassword) || 
+                string.IsNullOrWhiteSpace(newPassword) || 
+                string.IsNullOrWhiteSpace(confirmPassword))
             {
-                ShowError("Wypełnij wszystkie pola");
+                ErrorLabel.Text = "Wszystkie pola są wymagane";
+                ErrorLabel.IsVisible = true;
                 return;
             }
 
             if (newPassword != confirmPassword)
             {
-                ShowError("Nowe hasła nie są identyczne");
+                ErrorLabel.Text = "Nowe hasła nie są identyczne";
+                ErrorLabel.IsVisible = true;
                 return;
             }
 
             if (!_userService.ValidatePassword(newPassword))
             {
-                ShowError($"Hasło nie spełnia wymagań:\n{_userService.GetPasswordRequirementsText()}");
+                ErrorLabel.Text = $"Hasło nie spełnia wymagań:\n{_userService.GetPasswordRequirementsText()}";
+                ErrorLabel.IsVisible = true;
                 return;
             }
 
             bool success = _userService.ChangePassword(_currentUser.Username, oldPassword, newPassword);
 
-            if (!success)
+            if (success)
             {
-                ShowError("Nie udało się zmienić hasła.\nSprawdź stare hasło lub upewnij się,\nże nowe hasło nie było używane wcześniej.");
-                return;
+                await DisplayAlert("Sukces", "Hasło zostało zmienione pomyślnie", "OK");
+                await Navigation.PopAsync();
             }
-
-            await DisplayAlert("Sukces", "Hasło zostało pomyślnie zmienione", "OK");
-
-            if (_isRequired)
+            else
             {
-                if (_currentUser.IsAdmin)
+                ErrorLabel.Text = "Nie udało się zmienić hasła. Sprawdź stare hasło lub upewnij się, że nowe hasło nie było używane wcześniej.";
+                ErrorLabel.IsVisible = true;
+            }
+        }
+
+        private async void OnCancelClicked(object sender, EventArgs e)
+        {
+            if (_isFirstLogin)
+            {
+                bool confirm = await DisplayAlert(
+                    "Wymagana zmiana hasła",
+                    "Musisz zmienić hasło przy pierwszym logowaniu. Czy na pewno chcesz wrócić do ekranu logowania?",
+                    "Tak", "Nie");
+
+                if (confirm)
                 {
-                    await Navigation.PushAsync(new AdminPage(_userService, _currentUser));
-                }
-                else
-                {
-                    await Navigation.PushAsync(new UserPage(_userService, _currentUser));
+                    await Navigation.PopToRootAsync();
                 }
             }
             else
             {
                 await Navigation.PopAsync();
             }
-        }
-
-        private async void OnCancelClicked(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-        }
-
-        private void ShowError(string message)
-        {
-            ErrorLabel.Text = message;
-            ErrorLabel.IsVisible = true;
         }
     }
 }

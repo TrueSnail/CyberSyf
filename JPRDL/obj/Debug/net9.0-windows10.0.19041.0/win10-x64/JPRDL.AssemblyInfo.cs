@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JPRDL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+cb31f95ba7c081da0b13727a5100a31236118231")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b483a84352e9a5c9d095f80ca218edf130effa9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("JPRDL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JPRDL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
