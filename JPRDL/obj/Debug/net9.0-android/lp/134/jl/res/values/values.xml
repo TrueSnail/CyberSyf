@@ -5,29 +5,21 @@
         <item name="statusBarBackground">#000000</item>
     </style>
     <declare-styleable name="CoordinatorLayout">
-        <!-- A reference to an array of integers representing the
-             locations of horizontal keylines in dp from the starting edge.
-             Child views can refer to these keylines for alignment using
-             layout_keyline="index" where index is a 0-based index into
-             this array. -->
+        
         <attr format="reference" name="keylines"/>
-        <!-- Drawable to display behind the status bar when the view is set to draw behind it. -->
+        
         <attr format="color|reference" name="statusBarBackground"/>
     </declare-styleable>
     <declare-styleable name="CoordinatorLayout_Layout">
         <attr name="android:layout_gravity"/>
-        <!-- The class name of a Behavior class defining special runtime behavior
-             for this child view. -->
+        
         <attr format="string" name="layout_behavior"/>
-        <!-- The id of an anchor view that this view should position relative to. -->
+        
         <attr format="reference" name="layout_anchor"/>
-        <!-- The index of a keyline this view should position relative to.
-             android:layout_gravity will affect how the view aligns to the
-             specified keyline. -->
+        
         <attr format="integer" name="layout_keyline"/>
 
-        <!-- Specifies how an object should position relative to an anchor, on both the X and Y axes,
-             within its parent's bounds.  -->
+        
         <attr name="layout_anchorGravity">
             <!-- Push object to the top of its container, not changing its size. -->
             <flag name="top" value="0x30"/>
@@ -65,8 +57,7 @@
             <flag name="end" value="0x00800005"/>
         </attr>
 
-        <!-- Specifies how this view insets the CoordinatorLayout and make some other views
-             dodge it. -->
+        
         <attr format="enum" name="layout_insetEdge">
             <!-- Don't inset. -->
             <enum name="none" value="0x0"/>
@@ -83,7 +74,7 @@
             <!-- Inset the end edge. -->
             <enum name="end" value="0x00800005"/>
         </attr>
-        <!-- Specifies how this view dodges the inset edges of the CoordinatorLayout. -->
+        
         <attr name="layout_dodgeInsetEdges">
             <!-- Don't dodge any edges -->
             <flag name="none" value="0x0"/>

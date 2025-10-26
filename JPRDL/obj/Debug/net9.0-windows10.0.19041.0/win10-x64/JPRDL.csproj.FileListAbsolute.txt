@@ -59,7 +59,6 @@ C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10
 C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-150.png
 C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-200.png
 C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-400.png
-C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CoreMessagingXP.dll
 C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dcompi.dll
 C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dwmcorei.dll
@@ -552,3 +551,15 @@ C:\Users\danie\source\repos\CyberSyf\JPRDL\obj\Debug\net9.0-windows10.0.19041.0\
 C:\Users\danie\source\repos\CyberSyf\JPRDL\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\JPRDL.dll
 C:\Users\danie\source\repos\CyberSyf\JPRDL\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\refint\JPRDL.dll
 C:\Users\danie\source\repos\CyberSyf\JPRDL\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\JPRDL.pdb
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\BCrypt.Net-Next.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.Compatibility.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Imaging.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Security.Authentication.OAuth.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AI.ContentSafety.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AI.Imaging.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AI.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AI.Text.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.Background.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.BadgeNotifications.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Media.Capture.Projection.dll
+C:\Users\kamil\Desktop\CyberSyf\JPRDL\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll
