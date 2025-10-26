@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\changepasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\changepasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|c:\\users\\danie\\source\\repos\\cybersyf\\jprdl\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{222D4E27-DD6D-44B4-A436-6783404972DD}|JPRDL\\JPRDL.csproj|solutionrelative:jprdl\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,20 +54,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangePasswordPage.xaml",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml",
+              "RelativeDocumentMoniker": "JPRDL\\Views\\ChangePasswordPage.xaml",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml",
+              "RelativeToolTip": "JPRDL\\Views\\ChangePasswordPage.xaml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-26T13:33:36.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\LoginPage.xaml",
               "RelativeDocumentMoniker": "JPRDL\\Views\\LoginPage.xaml",
               "ToolTip": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\LoginPage.xaml",
               "RelativeToolTip": "JPRDL\\Views\\LoginPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwCQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-10-26T13:22:19.588Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "JPRDL\\Views\\LoginPage.xaml.cs",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ChangePasswordPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Views\\ChangePasswordPage.xaml.cs",
               "RelativeDocumentMoniker": "JPRDL\\Views\\ChangePasswordPage.xaml.cs",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "JPRDL.csproj",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\JPRDL.csproj",
               "RelativeDocumentMoniker": "JPRDL\\JPRDL.csproj",
@@ -99,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "JPRDL\\Services\\UserService.cs",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\CyberSyf\\JPRDL\\App.xaml.cs",
               "RelativeDocumentMoniker": "JPRDL\\App.xaml.cs",
