@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecuritySystem.Views.UserPage"
+             Title="Panel Użytkownika">
+    
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+        
+        <Label Text="👤" 
+               FontSize="80" 
+               HorizontalOptions="Center"/>
+        
+        <Label x:Name="WelcomeLabel" 
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+        
+        <Frame BorderColor="LightGray" Padding="20" CornerRadius="10" Margin="0,20,0,0">
+            <VerticalStackLayout Spacing="15">
+                <Button Text="Zmień hasło" 
+                        Clicked="OnChangePasswordClicked"
+                        BackgroundColor="#0078D4"
+                        TextColor="White"
+                        FontSize="16"/>
+                
+                <Button Text="Zakończ pracę" 
+                        Clicked="OnLogoutClicked"
+                        BackgroundColor="#DC3545"
+                        TextColor="White"
+                        FontSize="16"/>
+            </VerticalStackLayout>
+        </Frame>
+        
+    </VerticalStackLayout>
+</ContentPage>
