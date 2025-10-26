@@ -167,3 +167,17 @@ Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 Xamarin.Google.Crypto.Tink.Android.aar
 Xamarin.Google.ErrorProne.Annotations.aar
+Xamarin.Android.Glide.Annotations.aar
+Xamarin.Android.Glide.DiskLruCache.aar
+Xamarin.Google.Guava.ListenableFuture.aar
+Xamarin.Jetbrains.Annotations.aar
+Xamarin.Kotlin.StdLib.aar
+Xamarin.KotlinX.AtomicFU.aar
+Xamarin.KotlinX.AtomicFU.Jvm.aar
+Xamarin.KotlinX.Coroutines.Android.aar
+Xamarin.KotlinX.Coroutines.Core.aar
+Xamarin.KotlinX.Coroutines.Core.Jvm.aar
+Xamarin.KotlinX.Serialization.Core.aar
+Xamarin.KotlinX.Serialization.Core.Jvm.aar
+Microsoft.Maui.Controls.Compatibility.dll
+Microsoft.Maui.Controls.Compatibility.aar

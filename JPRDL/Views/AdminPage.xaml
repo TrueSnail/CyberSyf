@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecuritySystem.Views.AdminPage"
+             Title="Panel Administratora">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            
+            <Label Text="Panel Administratora" 
+                   FontSize="28" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+            
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Zarządzanie kontem" FontAttributes="Bold" FontSize="18"/>
+                    <Button Text="Zmień hasło administratora" 
+                            Clicked="OnChangePasswordClicked"
+                            BackgroundColor="#0078D4"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Zarządzanie użytkownikami" FontAttributes="Bold" FontSize="18"/>
+                    <Button Text="➕ Dodaj użytkownika" 
+                            Clicked="OnAddUserClicked"
+                            BackgroundColor="#28A745"
+                            TextColor="White"/>
+                    <Button Text="👥 Zarządzaj użytkownikami" 
+                            Clicked="OnManageUsersClicked"
+                            BackgroundColor="#17A2B8"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <Frame BorderColor="LightGray" Padding="15" CornerRadius="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Ustawienia zabezpieczeń" FontAttributes="Bold" FontSize="18"/>
+                    <Button Text="⚙️ Ograniczenia haseł" 
+                            Clicked="OnPasswordRestrictionsClicked"
+                            BackgroundColor="#FFC107"
+                            TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <Frame x:Name="UsersListFrame" 
+                   BorderColor="LightGray" 
+                   Padding="15" 
+                   CornerRadius="10"
+                   IsVisible="False">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Lista użytkowników" FontAttributes="Bold" FontSize="18"/>
+                    <ScrollView MaximumHeightRequest="400">
+                        <VerticalStackLayout x:Name="UsersContainer" Spacing="10"/>
+                    </ScrollView>
+                </VerticalStackLayout>
+            </Frame>
+            
+            <Button Text="Zakończ pracę" 
+                    Clicked="OnLogoutClicked"
+                    BackgroundColor="#DC3545"
+                    TextColor="White"
+                    Margin="0,20,0,0"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
