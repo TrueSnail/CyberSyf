@@ -36,7 +36,6 @@ namespace JPRDL.Views
                 return;
             }
 
-            // Sprawdź czy użytkownik musi zmienić hasło
             if (user.MustChangePassword)
             {
                 await DisplayAlert("Zmiana hasła wymagana", 
@@ -46,7 +45,6 @@ namespace JPRDL.Views
                 return;
             }
 
-            // Zalogowano pomyślnie - przejdź do odpowiedniego panelu
             if (user.IsAdmin)
             {
                 await Navigation.PushAsync(new AdminPage(_userService, user));
