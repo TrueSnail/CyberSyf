@@ -757,3 +757,7 @@ JPRDL/.DS_Store
 JPRDL/.gradle/
 JPRDL/.idea/
 JPRDL/local.properties
+/.vs
+/.vs/CyberSyf
+/JPRDL/bin
+/JPRDL/obj
